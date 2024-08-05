@@ -53,7 +53,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${eurekaUrl}
+      defaultZone: ${eurekaHost}/eureka/
 
 management:
   endpoint:

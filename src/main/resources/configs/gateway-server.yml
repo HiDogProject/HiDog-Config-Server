@@ -32,7 +32,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${eurekaUrl}
+      defaultZone: ${eurekaHost}/eureka/
 
 # 액츄에이터 설정
 management:
