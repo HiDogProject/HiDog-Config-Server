@@ -25,13 +25,14 @@ spring:
 
 # 유레카 설정
 eureka:
+  hostname: ${hostname}
   instance:
-    preferIpAddress: true
+    #preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:3101/eureka/
+      defaultZone: ${eurekaUrl}
 
 # 액츄에이터 설정
 management:

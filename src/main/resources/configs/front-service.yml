@@ -60,7 +60,7 @@ logging:
 eureka:
   instance:
     hostname: ${hostname}
-  #    preferIpAddress: true
+    # preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
