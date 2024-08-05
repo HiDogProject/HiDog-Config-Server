@@ -9,12 +9,12 @@ spring:
         lowerCaseServiceId: true
 
       routes:
-        - id: api-service
-          uri: lb://api-service
+        - id: front-service
+          uri: lb://front-service
           predicates:
-            - Path=/api/v1/**
+            - Path=/app/**
           filters:
-            - RewritePath=/api/v1/?(?<path>.*),/$\{path}
+            - RewritePath=/app/?(?<path>.*),/$\{path}
 
         - id: admin-service
           uri: lb://admin-service
