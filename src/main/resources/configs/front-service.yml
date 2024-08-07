@@ -18,9 +18,10 @@ spring:
     store-type: redis
     redis:
       namespace: spring:session
-  redis:
-    host: ${redis.host}
-    port: ${redis.port}
+  data:
+    redis:
+      host: ${redis.host}
+      port: ${redis.port}
 
 
   # JPA 설정
