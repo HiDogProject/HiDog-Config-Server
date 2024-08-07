@@ -1,5 +1,9 @@
 server:
   port: 3002
+  #redis 세션
+  servlet:
+    cookie:
+      name: SESSIONID
 
 spring:
   # 데이터베이스 설정
@@ -8,7 +12,15 @@ spring:
     url: jdbc:oracle:thin:@${db.host}:${db.port}:XE
     username: ${db.username}
     password: ${db.password}
-
+  # redis 세션
+  session:
+    store-type: redis
+    redis:
+      namespace: spring:session
+    data:
+      redis:
+        host: ${redis.host}
+        port: ${redis.port}
   # JPA 설정
   jpa:
     properties:
